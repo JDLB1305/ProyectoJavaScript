@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Libros</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tienda de Libros</h1>
+            <div id="loginPanel">
+                <h2>Login</h2>
+                <p>Usuario: <input type="text" id="user"></p>
+                <p>Contraseña: <input type="password" id="password"></p>
+                <div class="btn" onclick="login()">Iniciar Sesión</div>
+            </div>
+
+            <!-- Panel de Administración -->
+            <div id="adminPanel" class="hidden">
+                <h2>Administración de Libros</h2>
+                <div class="admin-controls">
+                    <input type="text" id="buscarTitulo" placeholder="Buscar por título" oninput="buscarLibroPorAPI()">
+                </div>
+                <div class="admin-content">
+                    <table id="tablaLibros">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Titulo</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogo">
+                            <!-- las filas se crean desde JS -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="admin-buttons">
+                    <input type="text" id="nuevoTitulo" placeholder="Título del nuevo libro">
+                    <input type="number" id="nuevoPrecio" placeholder="Precio">
+                    <div class="btn" onclick="agregarLibro()">Agregar Libro</div>
+                    <div class="btn" onclick="cerrarSesion()">Cerrar Sesión</div>
+                </div>
+            </div>
+
+            <!-- Panel de Cliente -->
+            <div id="clientePanel" class="hidden">
+                <h2>Registro de Usuario</h2>
+                <p id="registro"></p>
+                
+                <h2>Catálogo de Libros</h2>
+                <div class="cliente-content">
+                    <table id="tablaCatalogo">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogo">
+                            <!-- las filas se crean desde JS -->
+                        </tbody>
+                    </table>
+                    <div id="compraForm">
+                        <p>Número del libro: <input type="number" id="libroNumero"></p>
+                        <p>Cantidad: <input type="number" id="cantidad"></p>
+                        <div class="btn" onclick="comprarLibros()">Comprar</div>
+                        <p id="resultado"></p>
+                    </div>
+                    <div class="btn" onclick="cerrarSesion()">Cerrar Sesión</div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+  <script src="./js/main.js"></script>
+</body>
+</html>

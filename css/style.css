@@ -1,0 +1,115 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    padding: 20px;
+}
+h1, h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+li,p {
+    margin: 10px 0;
+}
+.btn {
+    display: block;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #214ec5;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* Estilo del panel de administración */
+#adminPanel, #clientePanel {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.admin-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-content {
+    float: right;
+    width: 60%;
+}
+
+.admin-buttons {
+    margin-top: 20px;
+}
+
+/* Estilo del panel de cliente */
+.cliente-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#tablaCatalogo {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+#tablaCatalogo th, #tablaCatalogo td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#compraForm {
+    width: 20%;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
